@@ -44,8 +44,12 @@
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Core</div>
                             <a class="nav-link" href="index.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-route"></i></div>
                                 Trajectory
+                            </a>
+                            <a class="nav-link" href="product.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-box"></i></div>
+                                Product
                             </a>
                             <div class="sb-sidenav-menu-heading">Interface</div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
@@ -311,40 +315,60 @@
                                         <table id="reservationDatatable" class="table table-bordered table-striped">
                                             <thead>
                                                 <tr>
-                                                    <th>IDR</th>
-                                                    <th>IDT</th>
-                                                    <th>IDP</th>
-                                                    <th>Reservation Date</th>
-                                                    <th>Number of Seats</th>
-                                                    <th>Price</th>
-                                                    <th>Payment Method</th>
-                                                    <th>Delete</th>
+                                                    <th>ID_Commande</th>
+                                                    <th>ID_Utilisateur</th>
+                                                    <th>ID_Produit</th>
+                                                    <th>Quantité</th>
+                                                    <th>Date_Commande</th>
+                                                    <th>Statut</th>
+                                                    <th>Mode_paiement</th>
+                                                    <th>Adresse_livraison</th>
+                                                    <th>Actions</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                             <tr>
-                                                <td>R001</td>
-                                                <td>T123</td>
-                                                <td>P456</td>
-                                                <td>2025/04/15</td>
+                                                <td>CMD001</td>
+                                                <td>USR123</td>
+                                                <td>P001</td>
                                                 <td>2</td>
-                                                <td>$350</td>
-                                                <td>Credit Card</td>
-                                                <td><button class="btn btn-link"><i class="fas fa-trash text-danger"></i></button></td>
+                                                <td>2025-04-09</td>
+                                                <td>En cours</td>
+                                                <td>Carte bancaire</td>
+                                                <td>15 rue de la Paix, 75001 Paris</td>
+                                                <td>
+                                                    <button class="btn btn-primary btn-sm"><i class="fas fa-pen"></i></button>
+                                                    <button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <td>R002</td>
-                                                <td>T124</td>
-                                                <td>P789</td>
-                                                <td>2025/04/20</td>
+                                                <td>CMD002</td>
+                                                <td>USR456</td>
+                                                <td>P002</td>
                                                 <td>1</td>
-                                                <td>$275</td>
+                                                <td>2025-04-08</td>
+                                                <td>Livré</td>
                                                 <td>PayPal</td>
-                                                <td><button class="btn btn-link"><i class="fas fa-trash text-danger"></i></button></td>
+                                                <td>25 avenue des Champs-Élysées, 75008 Paris</td>
+                                                <td>
+                                                    <button class="btn btn-primary btn-sm"><i class="fas fa-pen"></i></button>
+                                                    <button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <td>R003</td>
-                                                <td>T125</td>
+                                                <td>CMD003</td>
+                                                <td>USR789</td>
+                                                <td>P003</td>
+                                                <td>3</td>
+                                                <td>2025-04-07</td>
+                                                <td>En préparation</td>
+                                                <td>Virement bancaire</td>
+                                                <td>8 place de la Concorde, 75008 Paris</td>
+                                                <td>
+                                                    <button class="btn btn-primary btn-sm"><i class="fas fa-pen"></i></button>
+                                                    <button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
+                                                </td>
+                                            </tr>
                                                 <td>P101</td>
                                                 <td>2025/04/18</td>
                                                 <td>3</td>

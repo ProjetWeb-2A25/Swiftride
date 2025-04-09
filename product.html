@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Product Management - SB Admin</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="index.html">Start Bootstrap</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Settings</a></li>
+                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Core</div>
+                            <a class="nav-link" href="index.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-route"></i></div>
+                                Trajectory
+                            </a>
+                            <a class="nav-link" href="product.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-box"></i></div>
+                                Product
+                            </a>
+                            <div class="sb-sidenav-menu-heading">Interface</div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Layouts
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="layout-static.html">Static Navigation</a>
+                                    <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
+                                </nav>
+                            </div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                Pages
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                        Authentication
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="login.html">Login</a>
+                                            <a class="nav-link" href="register.html">Register</a>
+                                            <a class="nav-link" href="password.html">Forgot Password</a>
+                                        </nav>
+                                    </div>
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                                        Error
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="401.html">401 Page</a>
+                                            <a class="nav-link" href="404.html">404 Page</a>
+                                            <a class="nav-link" href="500.html">500 Page</a>
+                                        </nav>
+                                    </div>
+                                </nav>
+                            </div>
+                            <div class="sb-sidenav-menu-heading">Addons</div>
+                            <a class="nav-link" href="charts.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                Charts
+                            </a>
+                            <a class="nav-link" href="tables.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Tables
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Logged in as:</div>
+                        Start Bootstrap
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4 mb-2">Product Management</h1>
+                        <div class="mb-3">
+                            <button class="btn btn-primary me-2" style="width: 120px;" onclick="showTab('products')">Products</button>
+                            <button class="btn btn-secondary" style="width: 120px;" onclick="showTab('orders')">Orders</button>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-primary text-white mb-4">
+                                    <div class="card-body">Add Product</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="add-product.html">Add New</a>
+                                        <div class="small text-white"><i class="fas fa-plus"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-warning text-white mb-4">
+                                    <div class="card-body">Total Products</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#productTableSection">0 Products</a>
+                                        <div class="small text-white"><i class="fas fa-box"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-success text-white mb-4">
+                                    <div class="card-body">Total Orders</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#orderTableSection">0 Orders</a>
+                                        <div class="small text-white"><i class="fas fa-shopping-cart"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-area me-1"></i>
+                                        Monthly Sales by Product
+                                    </div>
+                                    <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-bar me-1"></i>
+                                        Revenue by Product
+                                    </div>
+                                    <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                Products List
+                            </div>
+                            <div class="card-body">
+                                <table id="datatablesSimple">
+                                    <thead>
+                                        <tr>
+                                            <th>ID_Produit</th>
+                                            <th>Nom</th>
+                                            <th>Description</th>
+                                            <th>Prix</th>
+                                            <th>Catégorie</th>
+                                            <th>Stock</th>
+                                            <th>Date_Ajout</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>P001</td>
+                                            <td>Smartphone XYZ</td>
+                                            <td>Smartphone haut de gamme avec 256GB</td>
+                                            <td>899.99 €</td>
+                                            <td>Électronique</td>
+                                            <td>50</td>
+                                            <td>2025-04-09</td>
+                                            <td>
+                                                <button class="btn btn-primary btn-sm" onclick="editProduct(this)"><i class="fas fa-pen"></i></button>
+                                                <button class="btn btn-danger btn-sm" onclick="deleteProduct(this)"><i class="fas fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>P002</td>
+                                            <td>Laptop Pro</td>
+                                            <td>Ordinateur portable 15" avec SSD 512GB</td>
+                                            <td>1299.99 €</td>
+                                            <td>Informatique</td>
+                                            <td>30</td>
+                                            <td>2025-04-08</td>
+                                            <td>
+                                                <button class="btn btn-primary btn-sm" onclick="editProduct(this)"><i class="fas fa-pen"></i></button>
+                                                <button class="btn btn-danger btn-sm" onclick="deleteProduct(this)"><i class="fas fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>P003</td>
+                                            <td>Écouteurs Sans Fil</td>
+                                            <td>Écouteurs bluetooth avec réduction de bruit</td>
+                                            <td>199.99 €</td>
+                                            <td>Audio</td>
+                                            <td>100</td>
+                                            <td>2025-04-07</td>
+                                            <td>
+                                                <button class="btn btn-primary btn-sm" onclick="editProduct(this)"><i class="fas fa-pen"></i></button>
+                                                <button class="btn btn-danger btn-sm" onclick="deleteProduct(this)"><i class="fas fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add Product Modal -->
+                    <div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="addProductModalLabel">Add New Product</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="productForm">
+                                        <div class="mb-3">
+                                            <label for="startingPoint" class="form-label">Starting Point</label>
+                                            <input type="text" class="form-control" id="startingPoint" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="destination" class="form-label">Destination</label>
+                                            <input type="text" class="form-control" id="destination" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="price" class="form-label">Price</label>
+                                            <input type="number" class="form-control" id="price" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="availablePlaces" class="form-label">Available Places</label>
+                                            <input type="number" class="form-control" id="availablePlaces" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="departureDate" class="form-label">Departure Date</label>
+                                            <input type="date" class="form-control" id="departureDate" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="departureTime" class="form-label">Departure Time</label>
+                                            <input type="time" class="form-control" id="departureTime" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="distance" class="form-label">Distance</label>
+                                            <input type="text" class="form-control" id="distance" required>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="submit" form="productForm" class="btn btn-primary">Add Product</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Your Website 2023</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+        <!-- Add Product Modal -->
+        <div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addProductModalLabel">Add New Product</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="productForm">
+                            <div class="mb-3">
+                                <label for="productName" class="form-label">Nom</label>
+                                <input type="text" class="form-control" id="productName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="productDescription" class="form-label">Description</label>
+                                <textarea class="form-control" id="productDescription" rows="3" required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="productPrice" class="form-label">Prix</label>
+                                <div class="input-group">
+                                    <input type="number" class="form-control" id="productPrice" step="0.01" required>
+                                    <span class="input-group-text">€</span>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="productCategory" class="form-label">Catégorie</label>
+                                <select class="form-select" id="productCategory" required>
+                                    <option value="">Choisir une catégorie...</option>
+                                    <option value="Électronique">Électronique</option>
+                                    <option value="Informatique">Informatique</option>
+                                    <option value="Audio">Audio</option>
+                                    <option value="Accessoires">Accessoires</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="productStock" class="form-label">Stock</label>
+                                <input type="number" class="form-control" id="productStock" min="0" required>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                        <button type="submit" form="productForm" class="btn btn-primary">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script>
+            // Handle product form submission
+            document.getElementById('productForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form values
+                const name = document.getElementById('productName').value;
+                const description = document.getElementById('productDescription').value;
+                const price = document.getElementById('productPrice').value;
+                const category = document.getElementById('productCategory').value;
+                const stock = document.getElementById('productStock').value;
+
+                // Add to table
+                const table = document.getElementById('datatablesSimple');
+                const row = table.getElementsByTagName('tbody')[0].insertRow();
+                
+                // Generate a new product ID
+                const productId = 'P' + String(Math.floor(Math.random() * 1000)).padStart(3, '0');
+                
+                // Insert cells
+                row.insertCell(0).textContent = productId;
+                row.insertCell(1).textContent = name;
+                row.insertCell(2).textContent = description;
+                row.insertCell(3).textContent = price + ' €';
+                row.insertCell(4).textContent = category;
+                row.insertCell(5).textContent = stock;
+                row.insertCell(6).textContent = new Date().toISOString().split('T')[0];
+                
+                // Add action buttons
+                const actionsCell = row.insertCell(7);
+                actionsCell.innerHTML = `
+                    <button class="btn btn-primary btn-sm" onclick="editProduct(this)"><i class="fas fa-pen"></i></button>
+                    <button class="btn btn-danger btn-sm" onclick="deleteProduct(this)"><i class="fas fa-trash"></i></button>
+                `;
+
+                // Clear form and close modal
+                this.reset();
+                const modal = bootstrap.Modal.getInstance(document.getElementById('addProductModal'));
+                modal.hide();
+
+                // Update total products count
+                updateTotalProducts();
+            });
+
+            // Delete product
+            function deleteProduct(button) {
+                if (confirm('Êtes-vous sûr de vouloir supprimer ce produit ?')) {
+                    button.closest('tr').remove();
+                    updateTotalProducts();
+                }
+            }
+
+            // Edit product (placeholder function)
+            function editProduct(button) {
+                const row = button.closest('tr');
+                alert('Fonctionnalité de modification à implémenter');
+            }
+
+            // Update total products count
+            function updateTotalProducts() {
+                const table = document.getElementById('datatablesSimple');
+                const count = table.getElementsByTagName('tbody')[0].getElementsByTagName('tr').length;
+                document.querySelector('.card.bg-warning a').textContent = count + ' Products';
+            }
+
+            // Initialize total products count
+            updateTotalProducts();
+            function showTab(tab) {
+                // Update button styles
+                if (tab === 'products') {
+                    document.querySelector('button[onclick="showTab(\'products\')"]').classList.add('btn-primary');
+                    document.querySelector('button[onclick="showTab(\'products\')"]').classList.remove('btn-secondary');
+                    document.querySelector('button[onclick="showTab(\'orders\')"]').classList.add('btn-secondary');
+                    document.querySelector('button[onclick="showTab(\'orders\')"]').classList.remove('btn-primary');
+                } else {
+                    document.querySelector('button[onclick="showTab(\'products\')"]').classList.add('btn-secondary');
+                    document.querySelector('button[onclick="showTab(\'products\')"]').classList.remove('btn-primary');
+                    document.querySelector('button[onclick="showTab(\'orders\')"]').classList.add('btn-primary');
+                    document.querySelector('button[onclick="showTab(\'orders\')"]').classList.remove('btn-secondary');
+                }
+            }
+
+            // Handle form submission
+            document.getElementById('productForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form values
+                const startingPoint = document.getElementById('startingPoint').value;
+                const destination = document.getElementById('destination').value;
+                const price = document.getElementById('price').value;
+                const availablePlaces = document.getElementById('availablePlaces').value;
+                const departureDate = document.getElementById('departureDate').value;
+                const departureTime = document.getElementById('departureTime').value;
+                const distance = document.getElementById('distance').value;
+
+                // Add to table
+                const table = document.getElementById('datatablesSimple');
+                const row = table.getElementsByTagName('tbody')[0].insertRow();
+                
+                // Insert cells
+                row.insertCell(0).textContent = startingPoint;
+                row.insertCell(1).textContent = destination;
+                row.insertCell(2).textContent = price;
+                row.insertCell(3).textContent = availablePlaces;
+                row.insertCell(4).textContent = departureDate;
+                row.insertCell(5).textContent = departureTime;
+                row.insertCell(6).textContent = distance;
+                
+                // Add action buttons
+                const actionsCell = row.insertCell(7);
+                actionsCell.innerHTML = `
+                    <button class="btn btn-primary btn-sm" onclick="editProduct(this)">Edit</button>
+                    <button class="btn btn-danger btn-sm" onclick="deleteProduct(this)">Delete</button>
+                `;
+
+                // Clear form and close modal
+                this.reset();
+                const modal = bootstrap.Modal.getInstance(document.getElementById('addProductModal'));
+                modal.hide();
+            });
+
+            // Delete product
+            function deleteProduct(button) {
+                if (confirm('Are you sure you want to delete this product?')) {
+                    button.closest('tr').remove();
+                }
+            }
+
+            // Edit product (placeholder function)
+            function editProduct(button) {
+                const row = button.closest('tr');
+                alert('Edit functionality to be implemented');
+            }
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+    </body>
+</html>
