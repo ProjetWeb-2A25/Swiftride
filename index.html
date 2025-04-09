@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Trajectory - SB Admin</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="index.html">Start Bootstrap</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Settings</a></li>
+                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Core</div>
+                            <a class="nav-link" href="index.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Trajectory
+                            </a>
+                            <div class="sb-sidenav-menu-heading">Interface</div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Layouts
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="layout-static.html">Static Navigation</a>
+                                    <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
+                                </nav>
+                            </div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                Pages
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                        Authentication
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="login.html">Login</a>
+                                            <a class="nav-link" href="register.html">Register</a>
+                                            <a class="nav-link" href="password.html">Forgot Password</a>
+                                        </nav>
+                                    </div>
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                                        Error
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="401.html">401 Page</a>
+                                            <a class="nav-link" href="404.html">404 Page</a>
+                                            <a class="nav-link" href="500.html">500 Page</a>
+                                        </nav>
+                                    </div>
+                                </nav>
+                            </div>
+                            <div class="sb-sidenav-menu-heading">Addons</div>
+                            <a class="nav-link" href="charts.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                Charts
+                            </a>
+                            <a class="nav-link" href="tables.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Tables
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Logged in as:</div>
+                        Start Bootstrap
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Route Management</h1>
+                        <div class="mb-4">
+                            <button class="btn btn-primary me-2" id="routeBtn" onclick="showInterface('route')">Route</button>
+                            <button class="btn btn-secondary" id="reservationBtn" onclick="showInterface('reservation')">Reservation</button>
+                        </div>
+                        <div class="row" id="routeCards">
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-primary text-white mb-4">
+                                    <div class="card-body">Add Trajectory</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#" data-bs-toggle="modal" data-bs-target="#addTrajectoryModal">Add New</a>
+                                        <div class="small text-white"><i class="fas fa-plus"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-warning text-white mb-4">
+                                    <div class="card-body">Total Routes</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#routeTableSection">15 Active Routes</a>
+                                        <div class="small text-white"><i class="fas fa-route"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Add Trajectory Modal -->
+                            <div class="modal fade" id="addTrajectoryModal" tabindex="-1" aria-labelledby="addTrajectoryModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="addTrajectoryModalLabel">Add New Trajectory</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form id="trajectoryForm">
+                                                <div class="mb-3">
+                                                    <label for="startingPoint" class="form-label">Starting Point</label>
+                                                    <input type="text" class="form-control" id="startingPoint" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="destination" class="form-label">Destination</label>
+                                                    <input type="text" class="form-control" id="destination" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="price" class="form-label">Price</label>
+                                                    <input type="number" class="form-control" id="price" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="availablePlaces" class="form-label">Available Places</label>
+                                                    <input type="number" class="form-control" id="availablePlaces" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="departureDate" class="form-label">Departure Date</label>
+                                                    <input type="date" class="form-control" id="departureDate" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="departureTime" class="form-label">Departure Time</label>
+                                                    <input type="time" class="form-control" id="departureTime" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="distance" class="form-label">Distance (miles)</label>
+                                                    <input type="number" class="form-control" id="distance" required>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="submit" form="trajectoryForm" class="btn btn-primary">Add Trajectory</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-area me-1"></i>
+                                        Monthly Bookings
+                                    </div>
+                                    <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-bar me-1"></i>
+                                        Revenue by Route
+                                    </div>
+                                    <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" id="routeTableSection">
+                            <div class="col-12">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <div>
+                                                <i class="fas fa-route me-1"></i>
+                                                Trajectories List
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <select class="form-select form-select-sm" id="routeSortField" style="width: auto;">
+                                                <option value="price">Price</option>
+                                                <option value="availablePlaces">Available Places</option>
+                                            </select>
+                                            <select class="form-select form-select-sm" id="routeSortOrder" style="width: auto;">
+                                                <option value="asc">Ascending</option>
+                                                <option value="desc">Descending</option>
+                                            </select>
+                                            <button class="btn btn-primary btn-sm" onclick="applySort('route')">
+                                                <i class="fas fa-sort me-1"></i>Sort
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <table id="datatablesSimple">
+                                        <thead>
+                                            <tr>
+                                                <th>Starting Point</th>
+                                                <th>Destination</th>
+                                                <th>Price</th>
+                                                <th>Available Places</th>
+                                                <th>Departure Date</th>
+                                                <th>Departure Time</th>
+                                                <th>Distance</th>
+                                                <th>Edit</th>
+                                                <th>Delete</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>New York</td>
+                                                <td>Los Angeles</td>
+                                                <td>$350</td>
+                                                <td>4</td>
+                                                <td>2025/04/15</td>
+                                                <td>09:30 AM</td>
+                                                <td>2,789 miles</td>
+                                                <td><button class="btn btn-link"><i class="fas fa-pen text-primary"></i></button></td>
+                                                <td><button class="btn btn-link"><i class="fas fa-trash text-danger"></i></button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Chicago</td>
+                                                <td>Miami</td>
+                                                <td>$275</td>
+                                                <td>2</td>
+                                                <td>2025/04/20</td>
+                                                <td>11:00 AM</td>
+                                                <td>1,378 miles</td>
+                                                <td><button class="btn btn-link"><i class="fas fa-pen text-primary"></i></button></td>
+                                                <td><button class="btn btn-link"><i class="fas fa-trash text-danger"></i></button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Seattle</td>
+                                                <td>San Francisco</td>
+                                                <td>$180</td>
+                                                <td>3</td>
+                                                <td>2025/04/18</td>
+                                                <td>08:15 AM</td>
+                                                <td>807 miles</td>
+                                                <td><button class="btn btn-link"><i class="fas fa-pen text-primary"></i></button></td>
+                                                <td><button class="btn btn-link"><i class="fas fa-trash text-danger"></i></button></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Reservation Table -->
+                        <div class="row" id="reservationSection" style="display: none;">
+                            <div class="col-12">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <div>
+                                                <i class="fas fa-ticket-alt me-1"></i>
+                                                Reservations List
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <select class="form-select form-select-sm" id="reservationSortField" style="width: auto;">
+                                                <option value="price">Price</option>
+                                                <option value="reservationDate">Reservation Date</option>
+                                            </select>
+                                            <select class="form-select form-select-sm" id="reservationSortOrder" style="width: auto;">
+                                                <option value="asc">Ascending</option>
+                                                <option value="desc">Descending</option>
+                                            </select>
+                                            <button class="btn btn-primary btn-sm" onclick="applySort('reservation')">
+                                                <i class="fas fa-sort me-1"></i>Sort
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <table id="reservationDatatable" class="table table-bordered table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>IDR</th>
+                                                    <th>IDT</th>
+                                                    <th>IDP</th>
+                                                    <th>Reservation Date</th>
+                                                    <th>Number of Seats</th>
+                                                    <th>Price</th>
+                                                    <th>Payment Method</th>
+                                                    <th>Delete</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>R001</td>
+                                                <td>T123</td>
+                                                <td>P456</td>
+                                                <td>2025/04/15</td>
+                                                <td>2</td>
+                                                <td>$350</td>
+                                                <td>Credit Card</td>
+                                                <td><button class="btn btn-link"><i class="fas fa-trash text-danger"></i></button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>R002</td>
+                                                <td>T124</td>
+                                                <td>P789</td>
+                                                <td>2025/04/20</td>
+                                                <td>1</td>
+                                                <td>$275</td>
+                                                <td>PayPal</td>
+                                                <td><button class="btn btn-link"><i class="fas fa-trash text-danger"></i></button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>R003</td>
+                                                <td>T125</td>
+                                                <td>P101</td>
+                                                <td>2025/04/18</td>
+                                                <td>3</td>
+                                                <td>$540</td>
+                                                <td>Debit Card</td>
+                                                <td><button class="btn btn-link"><i class="fas fa-trash text-danger"></i></button></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Your Website 2023</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+        <script>
+            function showInterface(type) {
+                if (type === 'route') {
+                    document.getElementById('routeTableSection').style.display = 'flex';
+                    document.getElementById('reservationSection').style.display = 'none';
+                    document.getElementById('routeCards').style.display = 'flex';
+                    document.getElementById('routeBtn').classList.add('btn-primary');
+                    document.getElementById('routeBtn').classList.remove('btn-secondary');
+                    document.getElementById('reservationBtn').classList.add('btn-secondary');
+                    document.getElementById('reservationBtn').classList.remove('btn-primary');
+                } else {
+                    document.getElementById('routeTableSection').style.display = 'none';
+                    document.getElementById('reservationSection').style.display = 'flex';
+                    document.getElementById('routeCards').style.display = 'none';
+                    document.getElementById('routeBtn').classList.add('btn-secondary');
+                    document.getElementById('routeBtn').classList.remove('btn-primary');
+                    document.getElementById('reservationBtn').classList.add('btn-primary');
+                    document.getElementById('reservationBtn').classList.remove('btn-secondary');
+                }
+            }
+
+            // Initialize DataTables
+            const routeTable = new simpleDatatables.DataTable("#datatablesSimple");
+            const reservationTable = new simpleDatatables.DataTable("#reservationDatatable");
+
+            // Apply sort function
+            function applySort(type) {
+                const table = type === 'route' ? routeTable : reservationTable;
+                const field = document.getElementById(type + 'SortField').value;
+                const order = document.getElementById(type + 'SortOrder').value;
+                
+                // Get the column index based on the field
+                const columns = table.columns;
+                let columnIndex = 0;
+                for (let i = 0; i < columns.length; i++) {
+                    const headerText = columns[i].text.toLowerCase();
+                    if (headerText.includes(field.toLowerCase())) {
+                        columnIndex = i;
+                        break;
+                    }
+                }
+
+                // Apply the sort
+                table.sort(columnIndex, order);
+            }
+
+            // Initialize with route interface
+            showInterface('route');
+        </script>
+    </body>
+</html>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script>
+            // Handle form submission
+            document.getElementById('trajectoryForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form values
+                const startingPoint = document.getElementById('startingPoint').value;
+                const destination = document.getElementById('destination').value;
+                const price = document.getElementById('price').value;
+                const availablePlaces = document.getElementById('availablePlaces').value;
+                const departureDate = document.getElementById('departureDate').value;
+                const departureTime = document.getElementById('departureTime').value;
+                const distance = document.getElementById('distance').value;
+
+                // Add to table
+                const table = document.getElementById('datatablesSimple');
+                const row = table.getElementsByTagName('tbody')[0].insertRow();
+                
+                // Insert cells
+                row.insertCell(0).textContent = startingPoint;
+                row.insertCell(1).textContent = destination;
+                row.insertCell(2).textContent = price;
+                row.insertCell(3).textContent = availablePlaces;
+                row.insertCell(4).textContent = departureDate;
+                row.insertCell(5).textContent = departureTime;
+                row.insertCell(6).textContent = distance;
+                
+                // Add action buttons
+                const actionsCell = row.insertCell(7);
+                actionsCell.innerHTML = `
+                    <button class="btn btn-primary btn-sm" onclick="editTrajectory(this)">Edit</button>
+                    <button class="btn btn-danger btn-sm" onclick="deleteTrajectory(this)">Delete</button>
+                `;
+
+                // Clear form and close modal
+                this.reset();
+                const modal = bootstrap.Modal.getInstance(document.getElementById('addTrajectoryModal'));
+                modal.hide();
+            });
+
+            // Delete trajectory
+            function deleteTrajectory(button) {
+                if (confirm('Are you sure you want to delete this trajectory?')) {
+                    button.closest('tr').remove();
+                }
+            }
+
+            // Edit trajectory (placeholder function)
+            function editTrajectory(button) {
+                const row = button.closest('tr');
+                alert('Edit functionality to be implemented');
+            }
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+    </body>
+</html>
