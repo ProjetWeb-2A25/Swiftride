@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login V18</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<!-- SweetAlert2 CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.min.css">
+	<!-- Font Awesome pour les icônes -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+<!--===============================================================================================-->
+</head>
+<body style="background-color: #666666;">
+	<!-- Icône de profil -->
+	<div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+		<button class="btn btn-light rounded-circle p-2" data-toggle="modal" data-target="#profileModal">
+			<i class="fa fa-user fa-lg"></i>
+		</button>
+	</div>
+
+	<!-- Modal de Profil -->
+	<div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="profileModalLabel">Manage your profile</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+<!-- Formulaire de connexion -->
+<form id="profileLoginForm" class="mb-4">
+    <div class="form-group mb-4">
+        <label for="profileEmail">Email</label>
+        <input type="email" class="form-control" id="profileEmail" name="email" required>
+    </div>
+    <div class="form-group mb-4">
+        <label for="profilePassword">Password</label>
+        <input type="password" class="form-control" id="profilePassword" name="password" required>
+    </div>
+    <button type="submit" class="btn btn-primary w-100">Show my information</button>
+</form>
+
+
+					<!-- Formulaire de modification (initialement caché) -->
+					<form id="profileUpdateForm" style="display: none;">
+						<div class="row mb-4">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="updateFirstname">Last name</label>
+									<input type="text" class="form-control" id="updateFirstname" name="firstname" required>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="updateLastname">name</label>
+									<input type="text" class="form-control" id="updateLastname" name="lastname" required>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group mb-4">
+							<label for="updatePhone">phone number</label>
+							<input type="tel" class="form-control" id="updatePhone" name="phone" required>
+						</div>
+
+						<div class="form-group mb-4">
+							<label>Rôle</label>
+							<div class="d-flex flex-column gap-2">
+								<div class="form-check">
+									<input type="radio" class="form-check-input" name="role" value="passager" id="updateRolePassager" required>
+									<label class="form-check-label" for="updateRolePassager">
+										<i class="fa fa-user mr-2"></i> Passanger
+									</label>
+								</div>
+								<div class="form-check">
+									<input type="radio" class="form-check-input" name="role" value="conducteur" id="updateRoleConducteur">
+									<label class="form-check-label" for="updateRoleConducteur">
+										<i class="fa fa-car mr-2"></i> Driver
+									</label>
+								</div>
+							</div>
+						</div>
+
+						<div class="d-flex gap-2 mb-3">
+							<button type="submit" class="btn btn-success flex-grow-1">Save</button>
+							<button type="button" class="btn btn-secondary" id="cancelUpdate">Cancel</button>
+						</div>
+
+						<div class="border-top pt-3">
+							<button type="button" class="btn btn-danger w-100" id="deleteAccount">
+								<i class="fas fa-trash-alt me-2"></i> Delete Account
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form id="loginForm" class="login100-form">
+					<span class="login100-form-title p-b-43">
+						Login to continue
+					</span>
+					
+					
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100" type="text" name="email" required>
+						<span class="focus-input100"></span>
+						<span class="label-input100">Email</span>
+					</div>
+					
+					
+					<div class="wrap-input100 validate-input" data-validate="Password is required">
+						<input class="input100" type="password" name="password" required>
+						<span class="focus-input100"></span>
+						<span class="label-input100">Password</span>
+					</div>
+
+					<div class="flex-sb-m w-full p-t-3 p-b-32">
+						<div class="contact100-form-checkbox">
+							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+							<label class="label-checkbox100" for="ckb1">
+								Remember me
+							</label>
+						</div>
+
+						<div>
+							<a href="#" class="txt1" data-toggle="modal" data-target="#forgotPasswordModal">
+								Forgot Password?
+							</a>
+						</div>
+					</div>
+			
+
+					<div class="container-login100-form-btn">
+						<button type="submit" class="login100-form-btn">
+							Login
+						</button>
+					</div>
+					
+					<div class="text-center p-t-46 p-b-20">
+						<button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#signupModal">
+							Sign up
+						</button>
+					</div>
+				</form>
+
+				<div class="login100-more" style="background-image: url('images/bg-01.jpg');">
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Forgot Password Modal -->
+	<div class="modal fade" id="forgotPasswordModal" tabindex="-1" role="dialog" aria-labelledby="forgotPasswordModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="forgotPasswordModalLabel">Password Recovery</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+						<input class="input100" type="text" name="recovery-email" id="recovery-email">
+						<span class="focus-input100"></span>
+						<span class="label-input100">Email Address</span>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary" id="sendRecoveryBtn">Send</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Sign Up Modal -->
+	<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header text-center">
+					<h4 class="modal-title w-100 font-weight-bold" id="signupModalLabel">Create Your Account</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body mx-3">
+					<form id="signupForm" class="signup-form validate-form" method="POST">
+						<div class="row mb-4">
+							<div class="col-md-6">
+								<div class="wrap-input100 validate-input" data-validate="First name is required">
+									<input class="input100" type="text" name="firstname" required>
+									<span class="focus-input100"></span>
+									<span class="label-input100">First Name</span>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="wrap-input100 validate-input" data-validate="Last name is required">
+									<input class="input100" type="text" name="lastname" required>
+									<span class="focus-input100"></span>
+									<span class="label-input100">Last Name</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="wrap-input100 validate-input mb-4" data-validate="Valid email is required: ex@abc.xyz">
+							<input class="input100" type="email" name="email" id="signupEmail" required>
+							<span class="focus-input100"></span>
+							<span class="label-input100">Email</span>
+						</div>
+
+						<div class="wrap-input100 validate-input mb-4" data-validate="Phone number is required">
+							<input class="input100" type="tel" name="phone" id="phone" required>
+							<span class="focus-input100"></span>
+							<span class="label-input100">Phone Number</span>
+						</div>
+
+						<div class="mb-4">
+							<label class="d-block mb-3">Choose your role:</label>
+							<div class="d-flex flex-column align-items-center gap-3">
+								<label class="w-100 text-center p-2 border rounded" style="cursor: pointer;">
+									<input type="radio" name="role" value="passager" required style="margin-right: 10px;">
+									<i class="fa fa-user ml-2"></i> Passager
+								</label>
+								<label class="w-100 text-center p-2 border rounded" style="cursor: pointer;">
+									<input type="radio" name="role" value="conducteur" required style="margin-right: 10px;">
+									<i class="fa fa-car ml-2"></i> Conducteur
+								</label>
+							</div>
+						</div>
+
+						<div class="wrap-input100 validate-input mb-4" data-validate="Password is required">
+							<input class="input100" type="password" name="password" required>
+							<span class="focus-input100"></span>
+							<span class="label-input100">Password</span>
+						</div>
+
+						<div class="container-login100-form-btn">
+							<button type="submit" class="login100-form-btn w-100">
+								Create Account
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+			</div>
+		</div>
+	</div>
+
+	
+	
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+	<script src="js/signup.js"></script>
+	<script src="js/profile.js"></script>
+	<script src="js/login.js"></script>
+<!--===============================================================================================-->
+	<!-- SweetAlert2 -->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.all.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+	<script>
+		const phoneInputField = document.querySelector("#phone");
+		const phoneInput = window.intlTelInput(phoneInputField, {
+			initialCountry: "tn",
+			preferredCountries: ["tn", "fr"],
+			utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+			autoPlaceholder: "aggressive",
+			formatOnDisplay: true,
+			separateDialCode: true
+		});
+
+		// Valider le numéro de téléphone avant la soumission
+		document.querySelector("#signupForm").addEventListener("submit", function(e) {
+			if (!phoneInput.isValidNumber()) {
+				e.preventDefault();
+				alert("Veuillez entrer un numéro de téléphone valide");
+			} else {
+				// Mettre à jour la valeur du champ avec le numéro complet
+				phoneInputField.value = phoneInput.getNumber();
+			}
+		});
+	</script>
+	<script src="js/main.js"></script>
+
+    <script src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,885 @@
+2025-04-12 21:24:19 - POST data: Array
+(
+    [firstname] => hello
+    [lastname] => 
+    [email] => 
+    [phone] => 
+    [role] => 
+    [password] => 
+)
+
+2025-04-12 21:24:19 - Database connection successful\n2025-04-12 21:24:19 - Executing query with params: Array
+(
+    [0] => 
+    [1] => hello
+    [2] => 
+    [3] => 
+    [4] => 
+    [5] => $2y$10$OqHD7WDi0rsrsZBjV0Py6eWzs1VH4JZXJ7pEnhoZfuEOubZjGIt/q
+)
+
+2025-04-12 21:25:30 - POST data: Array
+(
+    [firstname] => yassine
+    [lastname] => labidi
+    [email] => 
+    [phone] => 32145698
+    [role] => conducteur
+    [password] => hgatyh
+)
+
+2025-04-12 21:25:30 - Database connection successful\n2025-04-12 21:25:50 - POST data: Array
+(
+    [firstname] => yassine
+    [lastname] => labidi
+    [email] => 
+    [phone] => 32145698
+    [role] => conducteur
+    [password] => hgatyh
+)
+
+2025-04-12 21:25:51 - Database connection successful\n2025-04-12 21:27:19 - POST data: Array
+(
+    [firstname] => yassine
+    [lastname] => labidi
+    [email] => 
+    [phone] => 32145698
+    [role] => conducteur
+    [password] => hgatyh
+)
+
+2025-04-12 21:27:19 - Database connection successful\n2025-04-12 21:27:27 - POST data: Array
+(
+    [firstname] => yassine
+    [lastname] => labidi
+    [email] => 
+    [phone] => 32145698
+    [role] => conducteur
+    [password] => hgatyh
+)
+
+2025-04-12 21:27:27 - Database connection successful\n2025-04-12 21:29:22 - POST data: Array
+(
+    [firstname] => yassine
+    [lastname] => labidi
+    [email] => 
+    [phone] => 65987412
+    [role] => passager
+    [password] => ytre
+)
+
+2025-04-12 21:29:22 - Database connection successful\n2025-04-12 21:33:53 - POST data: Array
+(
+    [firstname] => hi
+    [lastname] => 
+    [email] => 
+    [phone] => 
+    [role] => 
+    [password] => 
+)
+
+2025-04-12 21:33:53 - Database connection successful\n2025-04-12 21:33:53 - Checking email: , count: 1
+2025-04-12 21:33:53 - Existing emails: Array
+(
+    [0] => 
+)
+
+2025-04-12 21:34:24 - POST data: Array
+(
+    [firstname] => hi
+    [lastname] => labidi
+    [email] => 
+    [phone] => 441
+    [role] => conducteur
+    [password] => rfcf
+)
+
+2025-04-12 21:34:24 - Database connection successful\n2025-04-12 21:34:24 - Checking email: , count: 1
+2025-04-12 21:34:24 - Existing emails: Array
+(
+    [0] => 
+)
+
+2025-04-12 21:38:25 - POST data: Array
+(
+    [firstname] => heee
+    [lastname] => labidi
+    [email] => 
+    [phone] => 32145698
+    [role] => conducteur
+    [password] => dszs
+)
+
+2025-04-12 21:38:25 - Database connection successful\n2025-04-12 21:38:25 - Vérification email:
+Email testé: 
+Nombre de correspondances: 1
+Emails correspondants: 
+
+Tous les emails dans la base:
+- 
+
+
+=== NOUVELLE INSCRIPTION ===
+2025-04-12 21:46:07
+Données brutes reçues:
+
+
+Données POST:
+Array
+(
+    [firstname] => yassine
+    [lastname] => labidi
+    [email] => 
+    [phone] => 32145698
+    [role] => conducteur
+    [password] => ytre
+)
+
+
+2025-04-12 21:46:07 - Database connection successful\n2025-04-12 21:46:07 - Vérification email:
+Email testé: 
+Nombre de correspondances: 1
+Emails correspondants: 
+
+Tous les emails dans la base:
+- 
+
+
+=== NOUVELLE INSCRIPTION ===
+2025-04-12 21:50:16
+Données brutes reçues:
+
+
+Données POST:
+Array
+(
+    [firstname] => yassine
+    [lastname] => labidi
+    [email] => 
+    [phone] => 21365478
+    [role] => conducteur
+    [password] => fine
+)
+
+
+2025-04-12 21:50:16 - Database connection successful\n2025-04-12 21:50:16 - Email reçu: 
+2025-04-12 21:50:16 - Executing query with params: Array
+(
+    [0] => labidi
+    [1] => yassine
+    [2] => 
+    [3] => 21365478
+    [4] => conducteur
+    [5] => $2y$10$p872WDkypLpEWYDjW62VI.5NmUh2ryMATLP3BUBB8IuauYTcRscCG
+)
+
+
+=== NOUVELLE INSCRIPTION ===
+2025-04-12 21:52:56
+Données brutes reçues:
+
+
+Données POST:
+Array
+(
+    [firstname] => amine
+    [lastname] => labidi
+    [email] => 
+    [phone] => 12365478
+    [role] => passager
+    [password] => hello
+)
+
+
+2025-04-12 21:52:56 - Database connection successful\n2025-04-12 21:52:56 - Email reçu: 
+2025-04-12 21:52:56 - Executing query with params: Array
+(
+    [0] => labidi
+    [1] => amine
+    [2] => 
+    [3] => 12365478
+    [4] => passager
+    [5] => $2y$10$cRDuTiX3UiolKptseJEtde7Gusdz.aDmBBDsWwQ6K3WTHPbGtMbEC
+)
+
+
+=== NOUVELLE INSCRIPTION ===
+2025-04-12 21:59:01
+Données brutes reçues:
+
+
+Données POST:
+Array
+(
+    [firstname] => belhassen
+    [lastname] => labidi
+    [email] => labidiyassine1920@gmail.com
+    [phone] => 32145698
+    [role] => passager
+    [password] => lpo
+)
+
+
+2025-04-12 21:59:01 - Database connection successful\n2025-04-12 21:59:01 - Email reçu: labidiyassine1920@gmail.com
+2025-04-12 21:59:01 - Executing query with params: Array
+(
+    [0] => labidi
+    [1] => belhassen
+    [2] => labidiyassine1920@gmail.com
+    [3] => 32145698
+    [4] => passager
+    [5] => $2y$10$pgpU8P21z7rrtb5wM2Cpo.QCVlDdvg9HgncS110cW9SEyNxq0RGW6
+)
+
+
+=== NOUVELLE INSCRIPTION ===
+2025-04-12 22:07:32
+Données brutes reçues:
+
+
+Données POST:
+Array
+(
+    [firstname] => gbvf
+    [lastname] => fdxx
+    [email] => labidimy63@gmail.com
+    [phone] => 32144698
+    [role] => conducteur
+    [password] => lkj
+)
+
+
+2025-04-12 22:07:32 - Database connection successful\n2025-04-12 22:07:32 - Email reçu: labidimy63@gmail.com
+2025-04-12 22:07:32 - Executing query with params: Array
+(
+    [0] => fdxx
+    [1] => gbvf
+    [2] => labidimy63@gmail.com
+    [3] => 32144698
+    [4] => conducteur
+    [5] => $2y$10$Ll6JkSlhVqemS71iuXKb6ufXe7ZqsQ1JsgnsBPDeXLbUbI7BK1OcG
+)
+
+
+=== NOUVELLE INSCRIPTION ===
+2025-04-12 22:15:25
+Données brutes reçues:
+
+
+Données POST:
+Array
+(
+    [firstname] => safe
+    [lastname] => labidi
+    [email] => smartpharm74@gmail.com
+    [phone] => 12365478
+    [role] => conducteur
+    [password] => hello
+)
+
+
+2025-04-12 22:15:25 - Database connection successful\n2025-04-12 22:15:25 - Email reçu: smartpharm74@gmail.com
+2025-04-12 22:15:25 - Executing query with params: Array
+(
+    [0] => labidi
+    [1] => safe
+    [2] => smartpharm74@gmail.com
+    [3] => 12365478
+    [4] => conducteur
+    [5] => $2y$10$CfUcK/lQVEEt/YPyd3ehCeA..rrAiuHZ8KfD4r/x0zh0UXGNbnyaW
+)
+
+
+=== NOUVELLE INSCRIPTION ===
+2025-04-12 22:33:41
+Données brutes reçues:
+
+
+Données POST:
+Array
+(
+    [firstname] => gbvf
+    [lastname] => fdxx
+    [email] => labidimy63@gmail.com
+    [phone] => 32145698
+    [role] => conducteur
+    [password] => bien
+)
+
+
+2025-04-12 22:33:41 - Database connection successful\n2025-04-12 22:33:41 - Email reçu: labidimy63@gmail.com
+2025-04-12 22:33:41 - Executing query with params: Array
+(
+    [0] => fdxx
+    [1] => gbvf
+    [2] => labidimy63@gmail.com
+    [3] => 32145698
+    [4] => conducteur
+    [5] => $2y$10$s7try5vsWVK66S6N77Y8LuLfVONZ2wZIbWxml64SwzCMOKnc.2Ija
+)
+
+
+=== NOUVELLE INSCRIPTION ===
+2025-04-12 22:41:43
+Données brutes reçues:
+
+
+Données POST:
+Array
+(
+    [firstname] => hi
+    [lastname] => fdxx
+    [email] => labidiyassine1920@gmail.com
+    [phone] => 32145698
+    [role] => conducteur
+    [password] => yoho
+)
+
+
+2025-04-12 22:41:43 - Database connection successful\n2025-04-12 22:41:43 - Email reçu: labidiyassine1920@gmail.com
+2025-04-12 22:41:43 - Executing query with params: Array
+(
+    [0] => fdxx
+    [1] => hi
+    [2] => labidiyassine1920@gmail.com
+    [3] => 32145698
+    [4] => conducteur
+    [5] => yoho
+)
+
+
+=== NOUVELLE INSCRIPTION ===
+2025-04-12 22:55:34
+Données brutes reçues:
+
+
+Données POST:
+Array
+(
+    [firstname] => salut
+    [lastname] => fdxx
+    [email] => labidi.mohamedyassine@esprit.tn
+    [phone] => 12365478
+    [role] => passager
+    [password] => toyo
+)
+
+
+2025-04-12 22:55:34 - Database connection successful\n2025-04-12 22:55:34 - Email reçu: labidi.mohamedyassine@esprit.tn
+2025-04-12 22:55:34 - Executing query with params: Array
+(
+    [0] => fdxx
+    [1] => salut
+    [2] => labidi.mohamedyassine@esprit.tn
+    [3] => 12365478
+    [4] => passager
+    [5] => toyo
+)
+
+
+=== NOUVELLE INSCRIPTION ===
+2025-04-12 23:07:08
+Données brutes reçues:
+
+
+Données POST:
+Array
+(
+    [firstname] => 
+    [lastname] => 
+    [email] => 
+    [phone] => 
+    [role] => 
+    [password] => 
+)
+
+
+2025-04-12 23:07:08 - Database connection successful\n2025-04-12 23:07:08 - Email reçu: 
+2025-04-12 23:07:08 - Executing query with params: Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => 
+    [5] => 
+)
+
+
+=== NOUVELLE INSCRIPTION ===
+2025-04-12 23:11:41
+Données brutes reçues:
+
+
+Données POST:
+Array
+(
+    [firstname] => gbvf
+    [lastname] => labidi
+    [email] => smartpharm74@gmail.com
+    [phone] => 
+    [role] => 
+    [password] => 
+)
+
+
+2025-04-12 23:11:41 - Database connection successful\n2025-04-12 23:11:41 - Email reçu: smartpharm74@gmail.com
+2025-04-12 23:11:41 - Executing query with params: Array
+(
+    [0] => labidi
+    [1] => gbvf
+    [2] => smartpharm74@gmail.com
+    [3] => 
+    [4] => 
+    [5] => 
+)
+
+
+=== NOUVELLE INSCRIPTION ===
+2025-04-12 23:11:58
+Données brutes reçues:
+
+
+Données POST:
+Array
+(
+    [firstname] => 
+    [lastname] => 
+    [email] => 
+    [phone] => 
+    [role] => 
+    [password] => 
+)
+
+
+2025-04-12 23:11:58 - Database connection successful\n2025-04-12 23:11:58 - Email reçu: 
+2025-04-12 23:11:58 - Executing query with params: Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => 
+    [5] => 
+)
+
+
+=== NOUVELLE INSCRIPTION ===
+2025-04-12 23:13:22
+Données brutes reçues:
+
+
+Données POST:
+Array
+(
+    [firstname] => 
+    [lastname] => 
+    [email] => 
+    [phone] => 
+    [role] => 
+    [password] => 
+)
+
+
+2025-04-12 23:13:22 - Database connection successful\n2025-04-12 23:13:22 - Email reçu: 
+2025-04-12 23:13:22 - Executing query with params: Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => 
+    [5] => 
+)
+
+
+=== NOUVELLE INSCRIPTION ===
+2025-04-12 23:22:04
+Données brutes reçues:
+
+
+Données POST:
+Array
+(
+    [firstname] => yassine
+    [lastname] => labidi
+    [email] => labidi.mohamedyassine@esprit.tn
+    [phone] => 36987542
+    [role] => conducteur
+    [password] => yuio
+)
+
+
+2025-04-12 23:22:04 - Database connection successful\n2025-04-12 23:22:04 - Email reçu: labidi.mohamedyassine@esprit.tn
+2025-04-12 23:22:04 - Executing query with params: Array
+(
+    [0] => labidi
+    [1] => yassine
+    [2] => labidi.mohamedyassine@esprit.tn
+    [3] => 36987542
+    [4] => conducteur
+    [5] => yuio
+)
+
+
+=== NOUVELLE INSCRIPTION ===
+2025-04-12 23:26:27
+Données brutes reçues:
+
+
+Données POST:
+Array
+(
+    [firstname] => yassine
+    [lastname] => labidi
+    [email] => labidiyassine1920@gmail.com
+    [phone] => 12365478
+    [role] => conducteur
+    [password] => oiukjhg
+)
+
+
+2025-04-12 23:26:27 - Database connection successful\n
+=== NOUVELLE INSCRIPTION ===
+2025-04-13 00:46:04
+Données brutes reçues:
+
+
+Données POST:
+Array
+(
+    [firstname] => yassine
+    [lastname] => labidi
+    [email] => labidi.mohamedyassine@esprit.tn
+    [phone] => 54785
+    [role] => conducteur
+    [password] => edf
+)
+
+
+2025-04-13 00:46:04 - Database connection successful\n
+=== NOUVELLE INSCRIPTION ===
+2025-04-13 00:46:12
+Données brutes reçues:
+
+
+Données POST:
+Array
+(
+    [firstname] => yassine
+    [lastname] => labidi
+    [email] => labidimy63@gmail.com
+    [phone] => 54785
+    [role] => conducteur
+    [password] => edf
+)
+
+
+2025-04-13 00:46:12 - Database connection successful\n
+=== NOUVELLE INSCRIPTION ===
+2025-04-13 00:46:23
+Données brutes reçues:
+
+
+Données POST:
+Array
+(
+    [firstname] => yassine
+    [lastname] => labidi
+    [email] => oinn@dc.edd
+    [phone] => 54785
+    [role] => conducteur
+    [password] => edf
+)
+
+
+2025-04-13 00:46:23 - Database connection successful\n2025-04-13 00:46:23 - Email reçu: oinn@dc.edd
+2025-04-13 00:46:23 - Executing query with params: Array
+(
+    [0] => labidi
+    [1] => yassine
+    [2] => oinn@dc.edd
+    [3] => 54785
+    [4] => conducteur
+    [5] => edf
+)
+
+
+=== NOUVELLE INSCRIPTION ===
+2025-04-13 01:09:57
+Données brutes reçues:
+
+
+Données POST:
+Array
+(
+    [firstname] => yassine
+    [lastname] => labidi
+    [email] => fkj@jjdf.dfc
+    [phone] => 65478963
+    [role] => conducteur
+    [password] => zed
+)
+
+
+2025-04-13 01:09:57 - Database connection successful\n2025-04-13 01:09:57 - Email reçu: fkj@jjdf.dfc
+2025-04-13 01:09:57 - Executing query with params: Array
+(
+    [0] => labidi
+    [1] => yassine
+    [2] => fkj@jjdf.dfc
+    [3] => 65478963
+    [4] => conducteur
+    [5] => zed
+)
+
+
+=== NOUVELLE INSCRIPTION ===
+2025-04-13 12:39:17
+Données brutes reçues:
+
+
+Données POST:
+Array
+(
+    [firstname] => yassine
+    [lastname] => fdxx
+    [email] => hsg@hs.hns
+    [phone] => 65478963
+    [role] => conducteur
+    [password] => htfghsq
+)
+
+
+2025-04-13 12:39:17 - Database connection successful\n2025-04-13 12:39:17 - Email reçu: hsg@hs.hns
+2025-04-13 12:39:17 - Executing query with params: Array
+(
+    [0] => fdxx
+    [1] => yassine
+    [2] => hsg@hs.hns
+    [3] => 65478963
+    [4] => conducteur
+    [5] => htfghsq
+)
+
+
+=== NOUVELLE INSCRIPTION ===
+2025-04-13 13:13:44
+Données brutes reçues:
+
+
+Données POST:
+Array
+(
+    [firstname] => islem
+    [lastname] => souid
+    [email] => islem.souid@esprit.tn
+    [phone] => +21653211064
+    [role] => conducteur
+    [password] => pgitw
+)
+
+
+2025-04-13 13:13:44 - Database connection successful\n2025-04-13 13:13:44 - Email reçu: islem.souid@esprit.tn
+2025-04-13 13:13:44 - Executing query with params: Array
+(
+    [0] => souid
+    [1] => islem
+    [2] => islem.souid@esprit.tn
+    [3] => +21653211064
+    [4] => conducteur
+    [5] => pgitw
+)
+
+
+=== NOUVELLE INSCRIPTION ===
+2025-04-14 10:16:09
+Données brutes reçues:
+
+
+Données POST:
+Array
+(
+    [firstname] => nourhene
+    [lastname] => zouabi
+    [email] => nourhene@zou.tn
+    [phone] => +21620602264
+    [role] => passager
+    [password] => p***-esperanza
+)
+
+
+2025-04-14 10:16:09 - Database connection successful\n2025-04-14 10:16:09 - Email reçu: nourhene@zou.tn
+2025-04-14 10:16:09 - Executing query with params: Array
+(
+    [0] => zouabi
+    [1] => nourhene
+    [2] => nourhene@zou.tn
+    [3] => +21620602264
+    [4] => passager
+    [5] => p***-esperanza
+)
+
+
+=== NOUVELLE INSCRIPTION ===
+2025-04-14 15:22:13
+Données brutes reçues:
+
+
+Données POST:
+Array
+(
+    [firstname] => yassine
+    [lastname] => labidi
+    [email] => labidi.mohamedyassine@esprit.tn
+    [phone] => +21631456987
+    [role] => passager
+    [password] => res
+)
+
+
+2025-04-14 15:22:13 - Database connection successful\n
+=== NOUVELLE INSCRIPTION ===
+2025-04-14 15:22:38
+Données brutes reçues:
+
+
+Données POST:
+Array
+(
+    [firstname] => yassine
+    [lastname] => labidi
+    [email] => ss@dj.rd
+    [phone] => +21631456987
+    [role] => conducteur
+    [password] => res
+)
+
+
+2025-04-14 15:22:38 - Database connection successful\n2025-04-14 15:22:38 - Email reçu: ss@dj.rd
+2025-04-14 15:22:38 - Executing query with params: Array
+(
+    [0] => labidi
+    [1] => yassine
+    [2] => ss@dj.rd
+    [3] => +21631456987
+    [4] => conducteur
+    [5] => res
+)
+
+
+=== NOUVELLE INSCRIPTION ===
+2025-04-14 19:38:16
+Données brutes reçues:
+
+
+Données POST:
+Array
+(
+    [firstname] => aaa
+    [lastname] => bbb
+    [email] => aaaa@bb.ccc
+    [phone] => +21622333444
+    [role] => passager
+    [password] => aabbcc
+)
+
+
+2025-04-14 19:38:16 - Database connection successful\n2025-04-14 19:38:16 - Email reçu: aaaa@bb.ccc
+2025-04-14 19:38:16 - Executing query with params: Array
+(
+    [0] => bbb
+    [1] => aaa
+    [2] => aaaa@bb.ccc
+    [3] => +21622333444
+    [4] => passager
+    [5] => aabbcc
+)
+
+
+=== NOUVELLE INSCRIPTION ===
+2025-04-14 19:40:43
+Données brutes reçues:
+
+
+Données POST:
+Array
+(
+    [firstname] => aaa
+    [lastname] => bbb
+    [email] => aaaa@bb.ccc
+    [phone] => +21622222222
+    [role] => conducteur
+    [password] => aaaaa
+)
+
+
+2025-04-14 19:40:43 - Database connection successful\n2025-04-14 19:40:43 - Email reçu: aaaa@bb.ccc
+2025-04-14 19:40:43 - Executing query with params: Array
+(
+    [0] => bbb
+    [1] => aaa
+    [2] => aaaa@bb.ccc
+    [3] => +21622222222
+    [4] => conducteur
+    [5] => aaaaa
+)
+
+
+=== NOUVELLE INSCRIPTION ===
+2025-04-14 19:42:24
+Données brutes reçues:
+
+
+Données POST:
+Array
+(
+    [firstname] => amine
+    [lastname] => labidi
+    [email] => amine.labidi@gmail.com
+    [phone] => +21623654789
+    [role] => passager
+    [password] => amine1
+)
+
+
+2025-04-14 19:42:24 - Database connection successful\n2025-04-14 19:42:24 - Email reçu: amine.labidi@gmail.com
+2025-04-14 19:42:24 - Executing query with params: Array
+(
+    [0] => labidi
+    [1] => amine
+    [2] => amine.labidi@gmail.com
+    [3] => +21623654789
+    [4] => passager
+    [5] => amine1
+)
+
+
+=== NOUVELLE INSCRIPTION ===
+2025-04-14 22:03:44
+Données brutes reçues:
+
+
+Données POST:
+Array
+(
+    [firstname] => belhassen
+    [lastname] => labidi
+    [email] => belhassen@com.tn
+    [phone] => +21623654789
+    [role] => conducteur
+    [password] => belh123
+)
+
+
+2025-04-14 22:03:44 - Database connection successful\n2025-04-14 22:03:44 - Email reçu: belhassen@com.tn
+2025-04-14 22:03:44 - Executing query with params: Array
+(
+    [0] => labidi
+    [1] => belhassen
+    [2] => belhassen@com.tn
+    [3] => +21623654789
+    [4] => conducteur
+    [5] => belh123
+)
+
